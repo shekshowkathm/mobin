@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HomeRoutingModule } from './home-routing.module';
+import { HomeComponent } from './home/home.component';
+import { ContactHeaderComponent } from './contact-header/contact-header.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
 
 //Angular Material Components
 
@@ -40,14 +42,18 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
-    AppComponent,
+    HomeComponent,
+    ContactHeaderComponent,
+    HeaderComponent,
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
+    CommonModule,
+    HomeRoutingModule,
     MatCheckboxModule,
     MatButtonModule,
     MatInputModule,
@@ -78,8 +84,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,FormsModule,ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+
+  ]
 })
-export class AppModule { }
+export class HomeModule { }

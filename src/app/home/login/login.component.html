@@ -1,0 +1,64 @@
+<div class="containers">
+  <div class="form" [ngSwitch]="color">
+    <div id="progress-bar" *ngIf="displayProgressBar">
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </div>
+
+
+    <div class="login" *ngSwitchCase="'red'">
+      <button mat-stroked-button color="accent" id="signup" (click)="switchToReg()">New user? <b>Sign up</b></button>
+      <h2>Login</h2>
+      <!-- <button mat-stroked-button color="accent" id="signup">New user? <b>Sign up</b></button> -->
+      <form>
+        <mat-form-field  hideRequiredMarker appearance="outline" color="warn" class="mat-form-field">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Please enter your mail id" required>
+        </mat-form-field>
+        <mat-form-field  hideRequiredMarker appearance="outline" color="warn" class="mat-form-field">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Please enter your password" required>
+        </mat-form-field>
+        <pre></pre>
+        <button mat-raised-button color="primary" id="submit">Submit</button><button mat-raised-button color="warn" id="reset">Reset</button>
+      </form>
+    </div>
+    <div class="register" *ngSwitchCase="'blue'">
+      <button mat-stroked-button color="accent" id="signin" (click)="switchToLog()"> <b>Sign in</b></button>
+      <h2>Register</h2>
+      <form>
+        <mat-form-field  hideRequiredMarker appearance="outline" color="warn" class="mat-form-field" id="name-feild">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Please enter your name" required>
+        </mat-form-field>
+        <mat-form-field  hideRequiredMarker appearance="outline" color="warn" class="mat-form-field" id="dob-feild">
+          <mat-label>Date of birth</mat-label>
+          <input matInput type="date" placeholder="Please enter your date of birth" required>
+        </mat-form-field><pre></pre>
+        <mat-form-field  hideRequiredMarker appearance="outline" color="warn" class="mat-form-field" id="gender-feild">
+          <mat-label>Gender</mat-label>
+          <!-- <input matInput type="text" placeholder="Please enter your gender" required> -->
+          <mat-select>
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{food.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field  hideRequiredMarker appearance="outline" color="warn" class="mat-form-field" id="email-feild">
+          <mat-label>Email</mat-label>
+          <input matInput type="text" placeholder="Please enter your email" required>
+        </mat-form-field><pre></pre>
+        <mat-form-field  hideRequiredMarker appearance="outline" color="warn" class="mat-form-field" id="password-feild">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" placeholder="Please enter your password" required>
+        </mat-form-field>
+        <mat-form-field  hideRequiredMarker appearance="outline" color="warn" class="mat-form-field" id="number-feild">
+          <mat-label>Number</mat-label>
+          <input matInput type="number" placeholder="Please enter your number" required>
+        </mat-form-field>
+        <pre></pre>
+        <button mat-raised-button color="primary" id="submit">Submit</button><button mat-raised-button color="warn" id="reset">Reset</button>
+
+      </form>
+    </div>
+  </div>
+</div>
