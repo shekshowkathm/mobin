@@ -1,14 +1,14 @@
 <div class="containers">
   <div class="logo">
-    <img src="../../../../assets/logo.png" alt="">
+    <img src="../../../../assets/logo.png" alt="logo">
   </div>
   <div class="navi">
     <ul>
       <li>Home</li>
-      <li>Service</li>
-      <li>Blog</li>
-      <li>About</li>
-      <li>Contact</li>
+      <li (click)="changeColor('purple')">Service</li>
+      <li (click)="changeColor('orange')">Blog</li>
+      <li (click)="changeColor('green')">About</li>
+      <li (click)="changeColor('cyan')">Seller</li>
     </ul>
   </div>
 </div>

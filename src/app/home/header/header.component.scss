@@ -32,9 +32,10 @@
         border-radius: 20px;
       }
       li:hover{
-        background-color: blue;
+        cursor: pointer;
+        background-color: #0F152B;
         color: #fff;
-        border: 4px double blue;
+        border: 4px double #0F152B;
       }
     }
   }

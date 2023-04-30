@@ -41,6 +41,11 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { AboutComponent } from './about/about.component';
+import { BlogComponent } from './blog/blog.component';
+
+import { SellerComponent } from './seller/seller.component';
+import { ServicesComponent } from './services/services.component';
 
 
 @NgModule({
@@ -49,7 +54,12 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     ContactHeaderComponent,
     HeaderComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    AboutComponent,
+    BlogComponent,
+    
+    SellerComponent,
+    ServicesComponent
   ],
   imports: [
     CommonModule,
